@@ -1,0 +1,225 @@
+﻿@inject Toolbelt.Blazor.I18nText.I18nText I18nText
+@inject IJSRuntime _jsruntime
+@inject SessionState sessionState
+@page "/"
+<PageTitle>@Text.Metatitle - @Text.Metadescription</PageTitle>
+<HeadContent>
+    <h1>@Text.Metatitle </h1>
+    <meta charset="utf-8">
+    <meta name="description" content="@Text.Metadescription" />
+    <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
+    <link rel="canonical" href="https://paynamart.com" />
+    <meta property="og:locale" content="tr" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="@Text.Metatitle - @Text.Metadescription" />
+    <meta property="og:description" content="@Text.Metatitle - @Text.Metadescription" />
+    <meta property="og:url" content="https://paynamart.com" />
+    <meta property="og:site_name" content="@Text.Metatitle" />
+    <meta property="og:updated_time" content="2022-05-02T22:37:28+03:00" />
+
+    <meta name="twitter:title" content="@Text.Metatitle - @Text.Metadescription" />
+    <meta name="twitter:description" content="@Text.Metatitle - @Text.Metadescription" />
+</HeadContent>
+<section class="wrapper bg-dark angled lower-start">
+    <div class="container pt-7 pt-md-11 pb-8">
+        <div class="row gx-0 gy-10 align-items-center">
+            <div class="col-lg-6" data-cues="slideInDown" data-group="page-title" data-delay="600">
+                <h1 class="display-1 text-white mb-4">@Text.AboutWhoCompany<br /><span class="typer text-primary text-nowrap" data-delay="100" data-words="customer satisfaction,business needs,creative ideas"></span><span class="cursor text-primary" data-owner="typer"></span></h1>
+                <p class="lead fs-24 lh-sm text-white mb-7 pe-md-18 pe-lg-0 pe-xxl-15">@Text.AboutMain</p>
+                <div>
+                    <a href="/contact" class="btn btn-lg btn-primary rounded">@Text.MenuContact</a>
+                </div>
+            </div>
+            <!-- /column -->
+            <div class="col-lg-5 offset-lg-1 mb-n18" data-cues="slideInDown">
+                <div class="position-relative">
+                    @*<a href="" class="btn btn-circle btn-primary btn-play ripple mx-auto mb-6 position-absolute" style="top:50%; left: 50%; transform: translate(-50%,-50%); z-index:3;" data-glightbox><i class="icn-caret-right"></i></a>*@
+                    <figure class="rounded shadow-lg"><img src="../assets/img/photos/about13.jpg" srcset="../assets/img/photos/about13@2x.jpg 2x" alt=""></figure>
+                </div>
+                <!-- /div -->
+            </div>
+            <!-- /column -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
+<!-- /section -->
+<section class="wrapper bg-light">
+    <div class="container pt-19 pt-md-21 pb-16 pb-md-18">
+     
+        <div class="row gy-10 gy-sm-13 gx-lg-3 mb-16 mb-md-18 align-items-center">
+            <div class="col-md-8 col-lg-6 position-relative">
+                <div class="shape bg-dot primary rellax w-17 h-21" data-rellax-speed="1" style="top: -2rem; left: -1.9rem;"></div>
+                <div class="shape rounded bg-soft-primary rellax d-md-block" data-rellax-speed="0" style="bottom: -1.8rem; right: -1.5rem; width: 85%; height: 90%; "></div>
+                <figure class="rounded"><img src="./assets/img/photos/about7.jpg" srcset="./assets/img/photos/about7@2x.jpg 2x" alt="" /></figure>
+            </div>
+            <!--/column -->
+            <div class="col-lg-5 col-xl-4 offset-lg-1">
+                @*<h2 class="fs-16 text-uppercase text-line text-primary mb-3">How It Works?</h2>*@
+                <h3 class="display-4 mb-7">@Text.MenuOurSector</h3>
+                <div class="d-flex flex-row mb-6">
+                    <div>
+                        <span class="icon btn btn-block btn-soft-primary disabled me-5"><span class="number fs-18">1</span></span>
+                    </div>
+                    <div>
+                        <h4 class="mb-1">@Text.SubManufacturing</h4>
+                        <p class="mb-0">@Text.UretimSub.ToString().Substring(0,50)<a href="/manufacturing"> >>></a></p>
+                    </div>
+                </div>
+                <div class="d-flex flex-row mb-6">
+                    <div>
+                        <span class="icon btn btn-block btn-soft-primary disabled me-5"><span class="number fs-18">2</span></span>
+                    </div>
+                    <div>
+                        <h4 class="mb-1">@Text.SubDistribution</h4>
+                        <p class="mb-0">@Text.DagilimSub.ToString().Substring(0, 60)<a href="/manufacturing"> >>></a></p>
+                    </div>
+                </div>
+              
+            </div>
+            <!--/column -->
+        </div>
+        <!--/.row -->
+      
+        <!--/.row -->
+    </div>
+    <!-- /.container -->
+</section>
+<!-- /section -->
+
+<!-- /section -->
+<section class="wrapper bg-light angled upper-end">
+    <div class="container py-14 py-md-16">
+        <div class="row">
+            <div class="col-lg-9 col-xl-8 col-xxl-7">
+               
+                <h3 class="display-4 mb-9">@Text.MenuOurServices</h3>
+            </div>
+            <!-- /column -->
+        </div>
+        <!-- /.row -->
+        <div class="swiper-container blog grid-view mb-10" data-margin="30" data-dots="true" data-items-xl="3" data-items-md="2" data-items-xs="1">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <article>
+                            <figure class="overlay overlay-1 hover-scale rounded mb-6">
+                                <a href="/beauty"> <img src="./assets/img/photos/guzellik.jpeg" alt="" /></a>
+                                @*<figcaption>
+                        <h5 class="from-top mb-0">Read More</h5>
+                    </figcaption>*@
+                            </figure>
+                            <div class="post-header">
+                                <h2 class="post-title h3 mb-3"><a class="link-dark" href="/beauty">@Text.SubBeautyandPersonalCare</a></h2>
+                            </div>
+                            <!-- /.post-header -->
+                            <!-- /.post-footer -->
+                        </article>
+                        <!-- /article -->
+                    </div>
+                    <!--/.swiper-slide -->
+                    <div class="swiper-slide">
+                        <article>
+                            <figure class="overlay overlay-1 hover-scale rounded mb-6">
+                                <a href="/medicinal"> <img src="./assets/img/photos/saglik.jpeg" alt="" /></a>
+
+                            </figure>
+                            <div class="post-header">
+                                <h2 class="post-title h3 mb-3"><a class="link-dark" href="./medicinal">@Text.SubMedicinalProducts</a></h2>
+                            </div>
+                            <!-- /.post-header -->
+                            <!-- /.post-footer -->
+                        </article>
+                        <!-- /article -->
+                    </div>
+                    <!--/.swiper-slide -->
+                    <div class="swiper-slide">
+                        <article>
+                            <figure class="overlay overlay-1 hover-scale rounded mb-6">
+                                <a href="/food"> <img src="./assets/img/photos/food.jpeg" alt="" /></a>
+
+                            </figure>
+                            <div class="post-header">
+                                <h2 class="post-title h3 mb-3"><a class="link-dark" href="/food">@Text.SubFoodProducts </a></h2>
+                            </div>
+                            <!-- /.post-header -->
+                            <!-- /.post-footer -->
+                        </article>
+                        <!-- /article -->
+                    </div>
+                    <!--/.swiper-slide -->
+                    <div class="swiper-slide">
+                        <article>
+                            <figure class="overlay overlay-1 hover-scale rounded mb-6">
+                                <a href="/agricultural-animal"> <img src="./assets/img/photos/Agricultural.png" alt="" /></a>
+
+                            </figure>
+                            <div class="post-header">
+                                <h2 class="post-title h3 mb-3"><a class="link-dark" href="/agricultural-animal">@Text.SubAgriculturalandAnimalEquipment</a></h2>
+                            </div>
+
+                            <!-- /.post-footer -->
+                        </article>
+                        <!-- /article -->
+                    </div>
+                    <div class="swiper-slide">
+                        <article>
+                            <figure class="overlay overlay-1 hover-scale rounded mb-6">
+                                <a href="/crude-oil"> <img src="./assets/img/photos/oil.png" alt="" /></a>
+
+                            </figure>
+                            <div class="post-header">
+                                <h2 class="post-title h3 mb-3"><a class="link-dark" href="/crude-oil">@Text.SubCrudeOilandOilDerivatives</a></h2>
+                            </div>
+
+                            <!-- /.post-footer -->
+                        </article>
+                        <!-- /article -->
+                    </div>
+                    <div class="swiper-slide">
+                        <article>
+                            <figure class="overlay overlay-1 hover-scale rounded mb-6">
+                                <a href="/desert-sea"> <img src="./assets/img/photos/desert.png" alt="" /></a>
+
+                            </figure>
+                            <div class="post-header">
+                                <h2 class="post-title h3 mb-3"><a class="link-dark" href="/desert-sea">@Text.SubDesertandSeaCampingtriptools</a></h2>
+                            </div>
+
+                            <!-- /.post-footer -->
+                        </article>
+                        <!-- /article -->
+                    </div>
+                    <!--/.swiper-slide -->
+                </div>
+                <!-- /.swiper-wrapper -->
+            </div>
+            <!-- /.swiper -->
+        </div>
+        <!-- /.swiper-container -->
+    </div>
+    <!-- /.container -->
+</section>
+<!-- /section -->
+
+@code{
+    Text Text = new Text();
+
+    protected async override Task OnInitializedAsync()
+    {
+        Text = await I18nText.GetTextTableAsync<Text>(this);
+
+
+    }
+    protected async override Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await _jsruntime.InvokeVoidAsync("Slider");
+
+        }
+    }
+
+
+}

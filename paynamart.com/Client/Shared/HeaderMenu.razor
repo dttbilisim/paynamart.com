@@ -1,0 +1,171 @@
+@inject Toolbelt.Blazor.I18nText.I18nText I18nText
+@inject IJSRuntime _jsruntime
+@inject SessionState sessionState
+
+<header class="wrapper bg-dark">
+    <nav class="navbar navbar-expand-lg center-nav transparent navbar-dark">
+        <div class="container flex-lg-row flex-nowrap align-items-center">
+            <div class="navbar-brand w-100">
+                <a href="/">
+                    Paynamart
+                    @*<img class="logo-dark" src="./assets/img/logo-dark.png" srcset="./assets/img/logo-dark@2x.png 2x" alt="" />*@
+                    @*<img class="logo-light" src="./assets/img/logo-light.png" srcset="./assets/img/logo-light@2x.png 2x" alt="" />*@
+                </a>
+            </div>
+            <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
+                <div class="offcanvas-header d-lg-none">
+                    <h3 class="text-white fs-30 mb-0">Paynamart</h3>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
+                    <ul class="navbar-nav">
+                        <li data-bs-dismiss="offcanvas"  class="nav-item ">
+                            <a  class="nav-link " href="/">@Text.MenuHome</a>
+
+                        </li>
+                        <li data-bs-dismiss="offcanvas" class="nav-item ">
+                            <a class="nav-link " href="/about">@Text.MenuAbout</a>
+
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">@Text.MenuOurSector</a>
+                            <ul class="dropdown-menu">
+                                <li data-bs-dismiss="offcanvas" class="nav-item"><a class="dropdown-item" href="/manufacturing">@Text.SubManufacturing</a></li>
+                                <li data-bs-dismiss="offcanvas" class="nav-item"><a class="dropdown-item" href="/distribution">@Text.SubDistribution</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">@Text.MenuOurServices</a>
+                            <ul class="dropdown-menu">
+                                <li data-bs-dismiss="offcanvas" class="nav-item"><a class="dropdown-item" href="/beauty">@Text.SubBeautyandPersonalCare</a></li>
+                                <li data-bs-dismiss="offcanvas" class="nav-item"><a class="dropdown-item" href="/medicinal">@Text.SubMedicinalProducts</a></li>
+                                <li data-bs-dismiss="offcanvas" class="nav-item"><a class="dropdown-item" href="/food">@Text.SubFoodProducts</a></li>
+                                <li data-bs-dismiss="offcanvas" class="nav-item"><a class="dropdown-item" href="/packaging">@Text.SubPackaging</a></li>
+                                <li data-bs-dismiss="offcanvas" class="nav-item"><a class="dropdown-item" href="/crude-oil">@Text.SubCrudeOilandOilDerivatives</a></li>
+                                <li data-bs-dismiss="offcanvas" class="nav-item"><a class="dropdown-item" href="/desert-sea">@Text.SubDesertandSeaCampingtriptools</a></li>
+                                <li data-bs-dismiss="offcanvas" class="nav-item"><a class="dropdown-item" href="/shipping-logistics">@Text.SubShippingandLogisticsServices</a></li>
+                                <li data-bs-dismiss="offcanvas" class="nav-item"><a class="dropdown-item" href="/import-export">@Text.SubImportandExportServices</a></li>
+                                <li data-bs-dismiss="offcanvas" class="nav-item"><a class="dropdown-item" href="/livestock-meat">@Text.SubLivestockandMeat</a></li>
+                                <li data-bs-dismiss="offcanvas" class="nav-item"><a class="dropdown-item" href="/agricultural-animal">@Text.SubAgriculturalandAnimalEquipment</a></li>
+
+                            </ul>
+                        </li>
+                        <li data-bs-dismiss="offcanvas" class="nav-item ">
+                            <a class="nav-link" href="/contact">@Text.MenuContact</a>
+
+                            <!--/.dropdown-menu -->
+                        </li>
+
+                    </ul>
+                    <!-- /.navbar-nav -->
+                    <div class="offcanvas-footer d-lg-none">
+                        <div>
+                            <a href="mailto:info@paynamart.com" class="link-inverse">info@paynamart.com</a>
+                            <br /> 00 (123) 456 78 90 <br />
+                            <nav class="nav social social-white mt-4">
+                                <a href="#"><i class="uil uil-twitter"></i></a>
+                                <a href="#"><i class="uil uil-facebook-f"></i></a>
+                                <a href="#"><i class="uil uil-dribbble"></i></a>
+                                <a href="#"><i class="uil uil-instagram"></i></a>
+                                <a href="#"><i class="uil uil-youtube"></i></a>
+                            </nav>
+                            <!-- /.social -->
+                        </div>
+                    </div>
+                    <!-- /.offcanvas-footer -->
+                </div>
+                <!-- /.offcanvas-body -->
+            </div>
+            <!-- /.navbar-collapse -->
+            <div class="navbar-other w-100 d-flex ms-auto">
+                <ul class="navbar-nav flex-row align-items-center ms-auto">
+                    <li onclick="@(async () => await LangChanceHandle(CurrentLang=="tr"?"en":"tr"))" class="nav-item">
+                        <img style="height:20px;width:30px" src="@(CurrentLang=="tr"?"assets/flag/us.svg":"assets/flag/tr.svg")"
+                             alt="@(CurrentLang=="tr"?"Turkish":"English")" />
+
+                    </li>
+                    @*<li onclick="@(async () => await LangChanceHandle(CurrentLang=="tr"?"en":"tr"))" class="nav-item text-uppercase">@(CurrentLang=="tr"?"Tr":"En")</li>*@
+
+
+                    <li class="nav-item d-lg-none">
+                        <button class="hamburger offcanvas-nav-btn"><span></span></button>
+                    </li>
+                </ul>
+                <!-- /.navbar-nav -->
+            </div>
+            <!-- /.navbar-other -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!-- /.navbar -->
+    <div class="offcanvas offcanvas-top bg-light" id="offcanvas-search" data-bs-scroll="true">
+        <div class="container d-flex flex-row py-6">
+            <form class="search-form w-100">
+                <input id="search-form" type="text" class="form-control" placeholder="Type keyword and hit enter">
+            </form>
+            <!-- /.search-form -->
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <!-- /.container -->
+    </div>
+    <!-- /.offcanvas -->
+</header>
+
+@code {
+    Text Text = new Text();
+    public string SetLanguage { get; set; }
+    string CurrentLang;
+    protected async override Task OnInitializedAsync()
+    {
+        Text = await I18nText.GetTextTableAsync<Text>(this);
+        var lang = await I18nText.GetCurrentLanguageAsync();
+
+        var language = await sessionState.GetLanguageLocal();
+        if (language != null)
+        {
+            CurrentLang = language;
+            await I18nText.SetCurrentLanguageAsync(language);
+        }
+        else
+        {
+            CurrentLang = "tr";
+            await I18nText.SetCurrentLanguageAsync("tr");
+            await sessionState.SetLanguageLocal("tr");
+        }
+        StateHasChanged();
+
+
+    }
+
+
+    async Task LangChanceHandle(string val)
+    {
+
+        CurrentLang = val.ToString();
+
+        string lng = CurrentLang.Length <= 2 ? CurrentLang : CurrentLang.Substring(0, 2);
+
+        await I18nText.SetCurrentLanguageAsync(lng);
+        SetLanguageasyc(lng);
+        StateHasChanged();
+
+    }
+    async Task SetLanguageasyc(string lang)
+    {
+        CurrentLang = lang;
+
+        await sessionState.SetLanguageLocal(lang);
+
+        StateHasChanged();
+
+    }
+
+     async Task MenuClose()
+    {
+        await _jsruntime.InvokeVoidAsync("MenuClose");
+    }
+
+
+}
+

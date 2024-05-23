@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+   <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+      <BlazorEnableCompression>true</BlazorEnableCompression>
+          <BlazorEnableTimeZoneSupport>false</BlazorEnableTimeZoneSupport>
+              <BlazorWebAssemblyPreserveCollationData>false</BlazorWebAssemblyPreserveCollationData>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' ">
+    <ExternalConsole>true</ExternalConsole>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' ">
+    <ExternalConsole>true</ExternalConsole>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="7.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="7.0.0" PrivateAssets="all" />
+        <PackageReference Include="Microsoft.AspNetCore.ResponseCompression" Version="2.2.0" />
+      <PackageReference Include="Toolbelt.Blazor.I18nText" Version="12.0.0" />
+       <PackageReference Include="Blazored.LocalStorage" Version="4.3.0" />
+       <PackageReference Include="Microsoft.AspNetCore.Localization" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Shared\paynamart.com.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="i18ntext\" />
+    <None Remove="Helper\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="i18ntext\" />
+    <Folder Include="Helper\" />
+  </ItemGroup>
+</Project>

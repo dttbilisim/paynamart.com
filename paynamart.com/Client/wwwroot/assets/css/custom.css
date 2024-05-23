@@ -1,0 +1,65 @@
+.nav-item .text-uppercase {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    font-weight: 900;
+}
+.navbar {
+    width: 100%;
+    position: fixed;
+    z-index: 1020;
+    background: #21262c;
+}
+.w-100 a {
+    color: white;
+    font-size: 35px;
+    font-weight: 900;
+  
+  
+}
+.widget .footer-logo {
+/*    color: white;*/
+    font-size: 30px;
+    font-weight: 900;
+}
+.bg-dark.text-inverse, .bg-dark.link-inverse, .bg-dark.text-inverse a:not(.btn):not([class*=link-]), .bg-navy.text-inverse, .bg-navy.link-inverse, .bg-navy.text-inverse a:not(.btn):not([class*=link-]), [class*=offcanvas-].text-inverse a:not(.btn):not([class*=link-]), .bg-navy.text-inverse .post-meta, .bg-dark.text-inverse .post-meta {
+    color: white;
+}
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    margin-top: 6px;
+}
+.navbar .container {
+    position: relative;
+    max-height: 60px;
+}
+
+.pt-7 {
+    padding-top: 5.75rem !important;
+}
+.figure.overlay img {
+    opacity: 1;
+    width: 100%;
+    max-width: 100%;
+    vertical-align: top;
+    position: relative;
+    max-height: 250px;
+    height:240px;
+}
+.item figure, .swiper-slide figure {
+    position: relative;
+    height:240px;
+    max-height: 250px;
+}
+.overlay overlay-1 hover-scale rounded mb-6 a img {
+    height:250px;
+}
+.offcanvas-backdrop.show {
+    opacity: 0;
+}

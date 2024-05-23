@@ -1,0 +1,80 @@
+﻿{
+  "MenuHome": "Home",
+  "MenuAbout": "About",
+  "MenuOurSector": "Our Sector",
+  "MenuOurServices": "Our Services",
+  "MenuContact": "Contact",
+  "SubManufacturing": "Manufacturing",
+  "SubDistribution": "Distribution",
+  "SubBeautyandPersonalCare": "Beauty and Personal Care",
+  "SubMedicinalProducts": "Medicinal Products",
+  "SubFoodProducts": "Food Products",
+  "SubPackaging": "Packaging",
+  "SubCrudeOilandOilDerivatives": "Crude Oil and Oil Derivatives",
+  "SubDesertandSeaCampingtriptools": "Desert and Sea Camping trip tools",
+  "SubShippingandLogisticsServices": "Shipping and Logistics Services",
+  "SubImportandExportServices": "Import and Export Services",
+  "SubLivestockandMeat": "Livestock and Meat",
+  "SubAgriculturalandAnimalEquipment": "Agricultural and Animal Equipment",
+
+  "Metadescription": "Paynamart is an company with multiple manufacturing activities distinguished by its production and operational efficiency according to industry standards",
+  "Metatitle": "Paynamart Global General Trading Co.",
+  "FooterAllRight": "All rights reserved.",
+  "FooterLearnMore": "Learn More",
+  "FooterOurNewsletter": "Our Newsletter",
+  "FooterOurNewsletterDetail": "Subscribe to our newsletter to get our news & deals delivered to you.",
+  "FooterEmailAddress": "Email Address",
+  "FooterEmailJoin": "Join",
+  "FooterContactUs": "Contact Us",
+  "ContactName": "First Name",
+  "ContactSurname": "Last Name",
+  "ContactEmail": "Email Address",
+  "ContactMessage": "Message",
+  "ContactSubmit": "Submit",
+  "ContactMain": "Get in Touch",
+  "ContactSub": "Have any questions? Reach out to us from our contact form and we will get back to you shortly.",
+  "ContactAddress": "Adress",
+  "ContactPhone": "Phone",
+  "CompanyAddress": "Yeşilbahçe Mah. 1468 Sok. Cebeci Apt. A Blok  No:7D Muratpaşa / Antalya",
+  "AboutWhoCompany": "Who Are We ?",
+  "AboutMain": "We are Paynamart Global General Trading Co, a trademark registered in the official departments in State of Turkey, Paynamart Global General Trading Co founded in 2022 and it’s headquartered in Antalya city.",
+  "AboutVisionMain": "Our Vision",
+  "AboutVisionSub": "To become the best business partner and the preferred supplier and the manufacturer in the world.",
+  "AboutOurPhilosophy": "Our Philosophy",
+  "AboutOurPhilosophySub": "Advocating Quality, On Time and Punctuality and Customer Satisfaction as core principles, we carry out our corporate activities.",
+  "AboutCustomerOrientation": "Customer Orientation",
+  "AboutCustomerOrientationSub": "aims to achieve quality and customer satisfaction through professional trained teams.",
+  "AboutOurMission": "Our Mission",
+  "AboutOurMissionSub": "Our mission focuses on providing our customers with reliable products and services at the highest levels of quality, efficiency and speed by using the best international practices in planning, execution and follow-up.",
+  "UretimSub": "Paynamart is an international company with multiple manufacturing activities, distinguished by its production and operational efficiency according to industry standards and international specifications. In addition, Paynamart pays special attention to build an industrial relations and partnerships with many international factories and specialized companies.",
+  "DagilimSub": "Paynamart launched with a global vision to become pioneer leading company in all distribution activities for its products that manufactured by itself and for products of the most important global-local brands. Paynamart has a long experience and great capabilities that enable it to provide professional logistical services and integrated distribution channels, in addition; has owns strategic warehouses managed by advanced systems that enables it to manage the distribution operations in a manner that meets the needs of the markets and provides its customers with value-added logistical services focusing on reducing the costs of operations, controlling quality, flexibility, service efficiency and delivery speed in a way that exceeds customer expectations.",
+  "GuzellikSub": "<p>Paynamart has agencies from the most famous international cosmetic companies, which are exclusively distributed by Paynamart; it can provide a distinguished cosmetics, personal care products, and natural products which are well-known by their quality and competitive prices.<p/><p><b> Personal care products<b/><p/> <p><b> Natural cosmetics<b/><p/><p><b> Skin care products<b/><p/><p><b> Hair care products<b/><p/><p><b> Body care products<b/><p/><p><b> Perfumes and lotions<b/><p/><p><b> And other beauty and personal care products<b/><p/>",
+  "SaglikSub": "<p>Paynamart is considered one of the largest medicinal companies specialized in distributing drugs, medical appliance and health care supplies to individuals, laboratories and health centers.<p/><p>Paynamart Company is proud to work with global suppliers and partners that have proven over time to be the pioneers in their field, so the company’s strategic goal is seeking to provide high-quality medical products and exceptional service to improve the quality of life and meet the healthcare needs around the world.<p/>",
+  "GidaSub": "Paynamart is one of the leading companies in the manufacture, supply, export and distribution of food products on a large scale with high quality and multiple options.<br> Paynamart works professionally in the wholesale sector, supplying and food retail market with extensive knowledge about food in the global market.",
+  "PacketSub": "Paynamart provides packaging solutions according to the customer’s request, as well as packaging services for all products, in addition to paper cup products and their accessories such as forks and spoons … and special prints on demand.<br>Paynamart uses technology and the quality of packaging components supported by creativity and innovation in a way Super.",
+  "OilSub": "Paynamart contributes to supplying the global market with petroleum products, crude oil and oil derivatives products.<br>Paynamart strives to be the leading company in this field with high specifications and competitive international prices.",
+  "DesertSea": "Paynamart Company works to secure all desert and sea camping trip tools such as tents, tools and various supplies.",
+  "Shipping": "Paynamart Company provides all transportation services (air – sea – land). As well as, full container load FCL, partial less than Container load LCL and all customs clearance services with high accuracy, terminating all shipping procedures, transporting goods in cooperation with major international companies, and provide all services related to export and unloading to meet the needs of customers .",
+  "Import": "Paynamart Company has experience, transparency in all import and export services, also has commercial relations and business channels in most global markets, as well as its permanent monitoring of market movement.",
+  "LiveStock": "Paynamart Company meets the needs of international markets of livestock such as sheep, cows, goats, camels and others with health guarantees and high quality.",
+  "Animal": "Paynamart Company meets all the needs of the regional markets in terms of agricultural and animal supplies with high quality products",
+  "AnimalMain1": "Protected agriculture and Greenhouse equipment",
+  "AnimalMain2": "(Heating – Cooling – Hydroponics – Benches & Displays – Lighting – Irrigation – Structures – Coverings- Interior Systems – Containers – Supplies – Hardware – Closeouts )",
+  "AnimalMain3": "Hatching machines and accessories",
+  "AnimelMain4": "(Hatchery Control, Monitoring and Alarm Systems – Medium Incubator – Incubator and Incubator Parts – Setters and Egg Setter Trays – Egg Basket – Hygrometers – Embryos and chicks optimal conditions systems – Airflow, Uniform Environmental Conditions – Uniform Embryo Activator – Gas-Sealed Incubation – Excellent Heat Transfer – Total O2 and CO2 Control – U Vaporator, Perfect and Uniform Humidification – Excellent Bio-Security for Healthy Chick Production – Fresh, Filtered Air Supply – Egg transport pallet – Chick Boxes – Chick Processing Equipment – Chick Trucks – Controls and Retrofits – Generators – Growout Equipment – Hatcher Trays – Incubator Trays – Meat Processing Equipment – Miscellaneous Equipment – Replacement Parts - Setter Trollies/ Farm Racks – Washing Equipment – Accessories)."
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+

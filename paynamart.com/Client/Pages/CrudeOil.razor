@@ -1,0 +1,71 @@
+﻿@inject Toolbelt.Blazor.I18nText.I18nText I18nText
+@inject IJSRuntime _jsruntime
+@inject SessionState sessionState
+@page "/crude-oil"
+
+<PageTitle>@Text.SubCrudeOilandOilDerivatives - @Text.Metadescription</PageTitle>
+<HeadContent>
+    <h1>@Text.SubCrudeOilandOilDerivatives </h1>
+    <meta charset="utf-8">
+    <meta name="description" content="@Text.OilSub" />
+    <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
+    <link rel="canonical" href="https://paynamart.com" />
+    <meta property="og:locale" content="tr" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="@Text.SubCrudeOilandOilDerivatives - @Text.Metadescription" />
+    <meta property="og:description" content="@Text.SubCrudeOilandOilDerivatives - @Text.Metadescription" />
+    <meta property="og:url" content="https://paynamart.com" />
+    <meta property="og:site_name" content="@Text.SubCrudeOilandOilDerivatives" />
+    <meta property="og:updated_time" content="2022-05-02T22:37:28+03:00" />
+
+    <meta name="twitter:title" content="@Text.SubCrudeOilandOilDerivatives - @Text.Metadescription" />
+    <meta name="twitter:description" content="@Text.SubCrudeOilandOilDerivatives - @Text.Metadescription" />
+</HeadContent>
+<section id="snippet-1" class="wrapper bg-light wrapper-border">
+    <div class="container pt-15 pt-md-17 pb-13 pb-md-15">
+        <div class="row gx-lg-8 gx-xl-12 gy-10 mb-14 mb-md-18 align-items-center">
+            <div class="col-lg-6 position-relative">
+                <div class="shape bg-line leaf rounded-circle rellax w-17 h-17" data-rellax-speed="1" style="top: -2rem; right: -0.6rem;"></div>
+                <div class="shape bg-pale-violet rounded-circle rellax w-17 h-17" data-rellax-speed="1" style="bottom: -2rem; left: -0.4rem;"></div>
+                <figure class="rounded mb-0"><img src="../assets/img/photos/oil.png" alt=""></figure>
+            </div>
+            <!--/column -->
+            <div class="col-lg-6">
+                <h3 class="display-4 mb-4">@Text.SubCrudeOilandOilDerivatives</h3>
+                <p class="mb-5">@((MarkupString)@Text.OilSub)</p>
+                <!--<div class="row gy-3">
+                    <div class="col-xl-6">
+                        <ul class="icon-list bullet-bg bullet-soft-leaf mb-0">
+                            <li><span><i class="uil uil-check"></i></span><span>Aenean quam ornare curabitur blandit consectetur.</span></li>
+                            <li class="mt-3"><span><i class="uil uil-check"></i></span><span>Nullam quis risus eget urna mollis ornare aenean leo.</span></li>
+                        </ul>
+                    </div>-->
+                <!--/column -->
+                <!--<div class="col-xl-6">
+                    <ul class="icon-list bullet-bg bullet-soft-leaf mb-0">
+                        <li><span><i class="uil uil-check"></i></span><span>Etiam porta euismod malesuada mollis nisl ornare sem.</span></li>
+                        <li class="mt-3"><span><i class="uil uil-check"></i></span><span>Vivamus sagittis lacus augue rutrum maecenas.</span></li>
+                    </ul>
+                </div>-->
+                <!--/column -->
+                <!--</div>-->
+                <!--/.row -->
+                <!--<a href="#" class="btn btn-soft-leaf rounded-pill mt-6 mb-0">More Details</a>-->
+            </div>
+            <!--/column -->
+        </div>
+    </div>
+</section>
+
+@code{
+    Text Text = new Text();
+
+    protected async override Task OnInitializedAsync()
+    {
+        Text = await I18nText.GetTextTableAsync<Text>(this);
+
+
+    }
+
+
+}

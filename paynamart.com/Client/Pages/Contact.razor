@@ -1,0 +1,122 @@
+﻿@inject Toolbelt.Blazor.I18nText.I18nText I18nText
+@inject IJSRuntime _jsruntime
+@inject SessionState sessionState
+@page "/contact"
+
+<PageTitle>@Text.MenuContact - @Text.Metadescription</PageTitle>
+<HeadContent>
+    <h1>@Text.MenuContact </h1>
+    <meta charset="utf-8">
+    <meta name="description" content="@Text.Metadescription" />
+    <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
+    <link rel="canonical" href="https://paynamart.com" />
+    <meta property="og:locale" content="tr" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="@Text.MenuContact - @Text.Metadescription" />
+    <meta property="og:description" content="@Text.MenuContact - @Text.Metadescription" />
+    <meta property="og:url" content="https://paynamart.com" />
+    <meta property="og:site_name" content="@Text.MenuContact" />
+    <meta property="og:updated_time" content="2022-05-02T22:37:28+03:00" />
+
+    <meta name="twitter:title" content="@Text.MenuContact - @Text.Metadescription" />
+    <meta name="twitter:description" content="@Text.MenuContact - @Text.Metadescription" />
+</HeadContent>
+<section class="wrapper bg-dark text-white">
+    <div class="container pt-18 pt-md-20 pb-21 pb-md-21 text-center">
+        <div class="row">
+            <div class="col-sm-10 col-md-8 col-lg-6 col-xl-6 col-xxl-5 mx-auto">
+                <h1 class="display-1 text-white mb-3">@Text.ContactMain</h1>
+                <p class="lead px-xl-10 px-xxl-10">@Text.ContactSub</p>
+            </div>
+            <!-- /column -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
+<!-- /section -->
+<section class="wrapper bg-light">
+    <div class="container pb-14 pb-md-16">
+        <div class="row">
+            <div class="col mt-n19 mb-16">
+                <div class="card shadow-lg">
+                    <div class="row gx-0">
+                        <div class="col-lg-6 image-wrapper bg-image bg-cover rounded-top rounded-lg-start d-none d-md-block" data-image-src="assets/img/photos/tm1.jpg">
+                        </div>
+                        <!--/column -->
+                        <div class="col-lg-6">
+                            <div class="p-10 p-md-11 p-lg-13">
+                                <div class="d-flex flex-row">
+                                    <div>
+                                        <div class="icon text-primary fs-28 me-4 mt-n1"> <i class="uil uil-location-pin-alt"></i> </div>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-1">@Text.ContactAddress</h5>
+                                        <address>@Text.CompanyAddress</address>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-row">
+                                    <div>
+                                        <div class="icon text-primary fs-28 me-4 mt-n1"> <i class="uil uil-phone-volume"></i> </div>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-1">@Text.ContactPhone</h5>
+                                        <p>0 850 340 77 66 </p>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-row">
+                                    <div>
+                                        <div class="icon text-primary fs-28 me-4 mt-n1"> <i class="uil uil-envelope"></i> </div>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-1">@Text.ContactEmail</h5>
+                                        <p class="mb-0"><a href="mailto:info@paynamart.com" class="link-body">info@paynamart.com</a></p>
+                                      
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/div -->
+                        </div>
+                        <!--/column -->
+                    </div>
+                    <!--/.row -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /column -->
+        </div>
+        <!-- /.row -->
+   
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
+<!-- /section -->
+<!--<section class="wrapper bg-light">
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25387.23478654725!2d-122.06115399490332!3d37.309248660190086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb4571bd377ab%3A0x394d3fe1a3e178b4!2sCupertino%2C%20CA%2C%20USA!5e0!3m2!1sen!2str!4v1645437305701!5m2!1sen!2str" style="width:100%; height: 500px; border:0" allowfullscreen></iframe>
+    </div>-->
+<!-- /.map -->
+<!--</section>-->
+
+@code{
+    Text Text = new Text();
+
+    protected async override Task OnInitializedAsync()
+    {
+        Text = await I18nText.GetTextTableAsync<Text>(this);
+
+
+    }
+    protected async override Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await _jsruntime.InvokeVoidAsync("ImageLoading");
+
+        }
+    }
+
+
+}
+
